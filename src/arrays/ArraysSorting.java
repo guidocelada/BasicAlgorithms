@@ -147,8 +147,10 @@ public class ArraysSorting {
     // //////////////////////////////////////////////////////////////////////////
 
     /**
-     * Choose a value an put the greater values to the right, and lowers to the
-     * left, recursive. O(n^2) but avg O(n log n). Memory: In place
+     * 3-way quicksort
+     * 
+     * Choose a value an put the greater values to the right, lowers to the
+     * left, and equals in the center. recursive. O(n^2) but avg O(n log n). Memory: In place
      */
     public static void quickSort(int[] array) {
 	shuffleArray(array);
@@ -177,7 +179,7 @@ public class ArraysSorting {
 	quickSort(array, greaterIndex + 1, hi);
     }
 
-    // Implementing Fisher���Yates shuffle. O(n)
+    // O(n)
     private static void shuffleArray(int[] ar) {
 	Random rnd = new Random();
 	for (int i = ar.length - 1; i > 0; i--) {
