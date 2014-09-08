@@ -3,6 +3,10 @@ package tree;
 import java.util.ArrayList;
 import java.util.Stack;
 
+/**
+ * 
+ * @author Guido Celada (celadaguido@gmail.com)
+ */
 @SuppressWarnings({"rawtypes", "unchecked"})
 public class BinaryNode<T extends Comparable<T>> extends Node<T> {
 	private int height;

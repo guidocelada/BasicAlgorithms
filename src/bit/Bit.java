@@ -1,6 +1,9 @@
 package bit;
 
-
+/**
+ * 
+ * @author Guido Celada (celadaguido@gmail.com)
+ */
 public class Bit {
   
   /**

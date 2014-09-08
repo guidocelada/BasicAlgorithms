@@ -4,6 +4,10 @@ import java.util.Arrays;
 import java.util.PriorityQueue;
 import java.util.Random;
 
+/**
+ * 
+ * @author Guido Celada (celadaguido@gmail.com)
+ */
 public class ArraysSorting {
 
     /**
@@ -173,7 +177,7 @@ public class ArraysSorting {
 	quickSort(array, greaterIndex + 1, hi);
     }
 
-    // Implementing Fisher–Yates shuffle. O(n)
+    // Implementing Fisher���Yates shuffle. O(n)
     private static void shuffleArray(int[] ar) {
 	Random rnd = new Random();
 	for (int i = ar.length - 1; i > 0; i--) {
