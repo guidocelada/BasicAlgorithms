@@ -57,11 +57,11 @@ public class MaxHeap {
     private void sinkDown(int k) {
 	int left = k*2;
 	
-	while (left < heap.length) {
+	while (left <= size) {
 	    int right = left + 1;
 	    int largestChild = left;
 	    
-	    if (left < (heap.length - 1) && heap[left] < heap[right] ) 
+	    if (left < size && heap[left] < heap[right] ) 
 		largestChild = right;
 	    
 	    if (heap[k] >= heap[largestChild])
