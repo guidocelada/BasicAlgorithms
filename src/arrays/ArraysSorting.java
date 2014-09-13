@@ -141,7 +141,7 @@ public class ArraysSorting {
     }
 
     public static void heapSortInPlace(int[] array) {
-	// TODO
+	
     }
 
     // //////////////////////////////////////////////////////////////////////////

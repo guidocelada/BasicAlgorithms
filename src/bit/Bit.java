@@ -76,6 +76,17 @@ public class Bit {
     return string.toString();
   }
   
+  /**
+   * Given an array of integers, every element appears twice except for one. Find
+   * that single one.
+   */
+  public static int singleNumber(int[] numbers) {
+      int result = 0;
+      for (int number : numbers) {
+	  result = result ^ number; //XOR operation will return 0 if both numbers are the same. 0 ^ number = number;
+      }
+      return result;
+  }
   
   public static void main(String[] args) {
     System.out.println(toBinaryString(0.72));
