@@ -1,8 +1,9 @@
 package arrays;
 
-import java.util.Arrays;
 import java.util.PriorityQueue;
 import java.util.Random;
+
+import tree.MaxHeap;
 
 /**
  * 
@@ -141,7 +142,9 @@ public class ArraysSorting {
     }
 
     public static void heapSortInPlace(int[] array) {
-	
+	MaxHeap maxHeap = new MaxHeap(array);
+	for (int i = array.length - 1; i >= 0; i--)
+	    array[i] = maxHeap.deleteMax();
     }
 
     // //////////////////////////////////////////////////////////////////////////
@@ -221,10 +224,10 @@ public class ArraysSorting {
     public static void main(String[] args) {
 
 	int[] array = { 2, 2, 6, 3, 6, 4, 2000 };
-	System.out.println(Arrays.toString(array));
-	int element = 2000;
-	System.out.println("The element " + element + " it's in the position "
-		+ binarySearch(array, element));
+//	System.out.println(Arrays.toString(array));
+//	int element = 2000;
+//	System.out.println("The element " + element + " it's in the position "
+//		+ binarySearch(array, element));
 	System.out.println("Please wait...");
 
 	array = new int[10000];
@@ -250,10 +253,14 @@ public class ArraysSorting {
 	heapSort(array.clone());
 	endTime = System.currentTimeMillis();
 	System.out.println("heapSort: " + (endTime - startTime) + " ms");
+	
+	startTime = System.currentTimeMillis();
+	heapSortInPlace(array.clone());
+	endTime = System.currentTimeMillis();
+	System.out.println("heapSortInPlace: " + (endTime - startTime) + " ms");
 
 	startTime = System.currentTimeMillis();
 	quickSort(array.clone());
-	System.out.println(Arrays.toString(array));
 	endTime = System.currentTimeMillis();
 	System.out.println("quickSort: " + (endTime - startTime) + " ms");
 
