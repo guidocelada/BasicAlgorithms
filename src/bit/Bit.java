@@ -89,7 +89,10 @@ public class Bit {
   }
   
   public static void main(String[] args) {
-    System.out.println(toBinaryString(0.72));
+    System.out.println(Integer.toBinaryString(3));
+    System.out.println(Integer.toBinaryString(8));
+    System.out.println(Integer.toBinaryString(10));
+    System.out.println(Integer.toBinaryString(290));
   }
 
 }
